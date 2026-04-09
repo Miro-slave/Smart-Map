@@ -15,4 +15,3 @@ configure_file(
         ${CMAKE_BINARY_DIR}/bin/SaintPetersburg_Edgelist_Short.csv
         COPYONLY
 )
-

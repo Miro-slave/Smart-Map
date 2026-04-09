@@ -1,7 +1,3 @@
-//
-// Created by YF on 26.03.2026.
-//
-
 #ifndef BACKEND_EDGE_H
 #define BACKEND_EDGE_H
 

@@ -2,12 +2,22 @@
 
 #include "edge.h"
 
+#include "find_path.grpc.pb.h"
+
 #include <fstream>
 #include <iterator>
 #include <vector>
 #include <sstream>
 
 namespace maps {
+  using routing::v1::PathService;
+
+  class A {
+  public:
+  private:
+    PathService path_service_;
+  };
+
   std::vector<Edge> DataParser::parse(std::ifstream& data_stream) {
     auto it = std::istream_iterator<std::string>(data_stream);
 

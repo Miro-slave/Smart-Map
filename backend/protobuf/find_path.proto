@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package routing.v1;
+
+option csharp_namespace = "Routing.V1";
+
+message StartAndEndCoordinates {
+  double start_x_coordinate = 1;
+  double start_y_coordinate = 2;
+  double end_x_coordinate = 3;
+  double end_y_coordinate = 4;
+}
+
+message ShortestPathResult {
+  bool path_exists = 1;
+  double distance = 2;
+  repeated uint64 path = 3;
+  StartAndEndCoordinates points = 4;
+}
+
+service PathService {
+  rpc FindShortestPath(StartAndEndCoordinates)
+      returns (ShortestPathResult);
+
+  rpc FindTimeOptimalPath(StartAndEndCoordinates)
+      returns (ShortestPathResult);
+}
